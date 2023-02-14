@@ -2,23 +2,52 @@
 <html lang="en">
   <head>
     <!-- change the title -->
-    <title>Hello!</title>
+    <title>API & Axios Demo</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- import the webpage's stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
     
   </head>  
   <body>
-    <h1>Hi there!</h1>
-    
-    <p>
-      I'm your cool new webpage.
-    </p>
+    <header>
+      <h1>Sandboxing with APIs</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col">
+            <h2>Some Free APIs to play with</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" id="ten-jokes">
+            <h4>Official Joke API</h4>
+            <p>10 random jokes:</p>
+            <ul id="jokes-target"></ul>
+          </div>
+          <div class="col" id="cat-facts">
+            <h4>Catfact.ninja</h4>
+            <p id="catfact-trigger">Click here for some cat facts!</p>
+            <ul id="catfact-target"></ul>
+          </div>
+          <div class="col" id="zip-code">
+            <h4>Zippopotam.us</h4>
+            <label for="zip-code-entry">Enter a zip code here:</label>
+            <input type="text" id="zip-code-entry" placeholder="e.g. 90210">
+            <button id="zip-code-trigger" type="button">Submit</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <button id="demo">Click me any way you want</button> -->
 
     <!-- import the webpage's javascript file -->
-    <script src="/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./main.js" defer></script>
   </body>
 </html>
