@@ -55,17 +55,19 @@ function displayJoke(joke) {
     let listItem = document.createElement('li');
     
     let name = document.createElement('p');
-    name.classList.add("bg-info")
+    name.classList.add("bg-info");
+    name.classList.add("text-tertiary")
+    name.classList.add("lead");
     name.innerHTML = joke.id + ": Type: " + joke.type;
     listItem.appendChild(name);
 
     let setup = document.createElement('p');
-    setup.classList.add("bg-secondary");
+    setup.classList.add("bg-warning");
     setup.innerText = joke.setup;
     listItem.appendChild(setup);
 
     let punchline = document.createElement('p');
-    punchline.classList.add("bg-success");
+    punchline.classList.add("text-success");
     punchline.innerText = joke.punchline;
     listItem.appendChild(punchline);
     
